@@ -1,0 +1,7 @@
+@media print {
+  .navbar, .backtop, .filterbar, .cta-band, .footer .socials, .hero__btns { display: none !important; }
+  body { font-size: 12pt; color: #000; background: #fff; }
+  .section { padding-block: 24px; }
+  .card, .value-card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+  a { text-decoration: none; color: #000; }
+}

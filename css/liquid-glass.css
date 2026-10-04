@@ -1,0 +1,229 @@
+.card,
+.value-card,
+.cta-strip,
+.contact-card,
+.filterbar {
+  position: relative;
+  isolation: isolate;
+  background: var(--glass-sheen), var(--glass-tint);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+}
+
+.card::after,
+.value-card::after,
+.cta-strip::after,
+.contact-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline: 14px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-hi-line), transparent);
+  pointer-events: none;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card,
+  .value-card,
+  .cta-strip {
+    transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) ease, border-color var(--dur-base) ease, backdrop-filter 0.35s ease, -webkit-backdrop-filter 0.35s ease;
+  }
+  .card:hover,
+  .value-card:hover {
+    -webkit-backdrop-filter: var(--glass-blur-hover);
+    backdrop-filter: var(--glass-blur-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--glass-shadow-hover);
+    border-color: var(--glass-line-bright);
+  }
+}
+
+.cta-band,
+.stats-band {
+  position: relative;
+  isolation: isolate;
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+}
+.cta-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--glass-sheen);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.navbar {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)), var(--glass-tint-soft);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+  border-bottom: 1px solid var(--glass-line);
+}
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-hi-line), transparent);
+  pointer-events: none;
+}
+.navbar.scrolled {
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  backdrop-filter: blur(32px) saturate(180%);
+  border-bottom-color: var(--glass-line);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+@media (hover: hover) {
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: var(--radius-full);
+  }
+  [data-theme="light"] .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.65);
+    border-color: var(--glass-line);
+  }
+}
+.nav-links a.active {
+  box-shadow: 0 0 14px var(--accent-soft), inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid var(--glass-line);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 8px 20px rgba(0, 0, 0, 0.20);
+}
+[data-theme="light"] .btn--ghost {
+  background: rgba(255, 255, 255, 0.55);
+}
+.btn--primary {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 12px 28px rgba(30, 58, 95, 0.50), 0 6px 12px rgba(0, 0, 0, 0.30);
+}
+@media (hover: hover) {
+  .btn:hover {
+    border-color: var(--glass-line-bright);
+  }
+  .btn--primary:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.30), 0 16px 36px rgba(30, 58, 95, 0.55), 0 8px 16px rgba(0, 0, 0, 0.32);
+  }
+  .btn--ghost:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 12px 28px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.hero__kicker,
+.section-label,
+.card__cat,
+.cat-tab:not(.active),
+.breadcrumb {
+  background: rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-full);
+}
+[data-theme="light"] .hero__kicker,
+[data-theme="light"] .section-label,
+[data-theme="light"] .card__cat,
+[data-theme="light"] .cat-tab:not(.active),
+[data-theme="light"] .breadcrumb {
+  background: rgba(255, 255, 255, 0.60);
+  border-color: var(--glass-line);
+}
+
+.searchbox input,
+.sortbox select {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+}
+[data-theme="light"] .searchbox input,
+[data-theme="light"] .sortbox select {
+  background: rgba(255, 255, 255, 0.60);
+  border-color: var(--glass-line);
+}
+.searchbox input:focus {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 0 4px var(--accent-soft), 0 0 18px var(--accent-soft);
+}
+.sortbox select:focus {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 38%, rgba(60, 100, 160, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero__grid {
+  position: relative;
+  z-index: 1;
+}
+
+.socials a {
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card,
+  .value-card,
+  .cta-strip,
+  .contact-card,
+  .filterbar { background: var(--surface); }
+  .navbar { background: var(--surface); }
+  .navbar::after,
+  .card::after,
+  .value-card::after,
+  .cta-strip::after,
+  .contact-card::after,
+  .hero::before,
+  .cta-band::after { display: none; }
+  .btn--ghost,
+  .searchbox input,
+  .sortbox select,
+  .hero__kicker,
+  .section-label,
+  .card__cat,
+  .cat-tab:not(.active),
+  .breadcrumb,
+  .socials a { background: var(--surface); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .value-card,
+  .cta-strip,
+  .cta-band,
+  .stats-band,
+  .navbar,
+  .filterbar { transition: none; }
+  .card:hover,
+  .value-card:hover {
+    transform: none;
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
+  }
+}
