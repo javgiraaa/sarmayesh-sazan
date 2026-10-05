@@ -121,7 +121,7 @@
 }
 
 .hero__icon--cold {
-  right: clamp(60px, 14vw, 160px);
+  right: clamp(28px, 7vw, 88px);
   top: 50%;
   width: clamp(72px, 11vw, 120px);
   margin-top: calc(clamp(72px, 11vw, 120px) / -2);
@@ -132,7 +132,7 @@
   animation: hero-spin-cw 28s linear infinite;
 }
 .hero__icon--warm {
-  left: clamp(60px, 14vw, 160px);
+  left: clamp(28px, 7vw, 88px);
   top: 56%;
   width: clamp(64px, 10vw, 110px);
   opacity: 0.6;
