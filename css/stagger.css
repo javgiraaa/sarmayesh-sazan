@@ -1,0 +1,26 @@
+/* Soft staggered entrance utilities — 16px fade-up, ~70ms per-child stagger.
+   JS assigns --d per child and adds .in on DOMContentLoaded. */
+.stagger-in > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s var(--ease-out);
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+.stagger-in.in > * {
+  opacity: 1;
+  transform: none;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .stagger-in > * { will-change: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger-in > *,
+  .stagger-in.in > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

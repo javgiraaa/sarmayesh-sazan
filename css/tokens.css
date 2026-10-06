@@ -1,0 +1,172 @@
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --section-pad: clamp(72px, 10vw, 128px);
+  --section-title-gap: clamp(32px, 4vw, 56px);
+  --card-gap: clamp(20px, 3vw, 32px);
+  --grid-gap: 24px;
+  --hero-top-space: clamp(80px, 12vw, 160px);
+
+  --primary-50: #f0f5fa;
+  --primary-100: #d9e6f2;
+  --primary-300: #6b96c4;
+  --primary-500: #1e3a5f;
+  --primary-700: #0f2942;
+  --primary-gradient: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+  --primary-gradient-soft: linear-gradient(135deg, rgba(30,58,95,0.08) 0%, rgba(44,82,130,0.08) 100%);
+
+  --accent-500: #f59e0b;
+  --accent-700: #b45309;
+  --accent-soft: rgba(245, 158, 11, 0.12);
+
+  --bg: #f7f9fc;
+  --bg-soft: #f5f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef2f8;
+
+  --surface-3: #e2e8f0;
+  --text: #0a1424;
+  --body: #2a3b52;
+  --muted: #5a6a85;
+  --faint: #94a3b8;
+  --border: rgba(15, 30, 60, 0.10);
+  --border-soft: rgba(15, 30, 60, 0.06);
+  --border-strong: rgba(15, 30, 60, 0.16);
+
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+
+  --shadow-sm: 0 1px 3px rgba(20, 40, 80, 0.07);
+  --shadow-md: 0 10px 30px rgba(20, 40, 80, 0.10);
+  --shadow-lg: 0 24px 60px rgba(20, 40, 80, 0.14);
+
+  --glass-bg: rgba(247, 249, 252, 0.8);
+  --glass-bg-scrolled: rgba(247, 249, 252, 0.92);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+
+  --font-main: "Vazirmatn", "IRANSans", "Segoe UI", Tahoma, system-ui, sans-serif;
+  --fs-base: 16.5px;
+  --lh-base: 1.9;
+  --h1-size: clamp(30px, 5vw, 52px);
+  --h2-size: clamp(22px, 3.2vw, 32px);
+  --h3-size: 19px;
+
+  --container-max: 1200px;
+  --container-pad: clamp(20px, 4vw, 32px);
+  --nav-height: 72px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.3s;
+  --dur-slow: 0.6s;
+
+  /* Liquid glass layer (tints only — no theme color changes) */
+  --glass-tint: rgba(255, 255, 255, 0.55);
+  --glass-tint-soft: rgba(255, 255, 255, 0.30);
+  --glass-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.30) 100%);
+  --glass-line: rgba(15, 30, 60, 0.12);
+  --glass-line-bright: rgba(15, 30, 60, 0.22);
+  --glass-hi-line: rgba(255, 255, 255, 0.55);
+  --glass-blur: blur(16px) saturate(160%);
+  --glass-blur-hover: blur(18px) saturate(180%);
+  --glass-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.60), inset 0 -1px 0 rgba(15, 30, 60, 0.06), 0 20px 40px rgba(20, 40, 80, 0.12), 0 8px 16px rgba(20, 40, 80, 0.08);
+  --glass-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.65), inset 0 -1px 0 rgba(15, 30, 60, 0.06), 0 28px 56px rgba(20, 40, 80, 0.18), 0 12px 24px rgba(20, 40, 80, 0.12);
+  /* Floating pill + liquid-glass utilities (additive only) */
+  --glass-pill-bg: rgba(255, 255, 255, 0.55);
+  --glass-pill-bg-scrolled: rgba(255, 255, 255, 0.68);
+  --glass-pill-line: rgba(255, 255, 255, 0.14);
+  --glass-pill-blur: blur(30px) saturate(180%);
+  --glass-pill-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 20px 50px rgba(0, 0, 0, 0.35), 0 8px 16px rgba(0, 0, 0, 0.20);
+  --glass-pill-shadow-scrolled: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 24px 60px rgba(0, 0, 0, 0.42), 0 10px 20px rgba(0, 0, 0, 0.24);
+  --glass-btn-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  --glass-btn-blur: blur(12px) saturate(180%);
+  --glass-card-blur: blur(16px) saturate(180%);
+  --glass-input-blur: blur(18px);
+  --glass-chip-blur: blur(12px);
+  --glass-blob-opacity: 0.3;
+}
+
+[data-theme="dark"] {
+  --bg: #060a12;
+  --bg-soft: #0a1220;
+  --surface: #0f1a2e;
+  --surface-2: #16233b;
+  --surface-3: #1e2d48;
+  --text: #f1f5f9;
+  --body: #cbd5e1;
+  --muted: #94a3b8;
+  --faint: #64748b;
+  --border: rgba(148, 163, 184, 0.12);
+  --border-soft: rgba(148, 163, 184, 0.08);
+  --border-strong: rgba(148, 163, 184, 0.2);
+
+  --primary-500: #3b82f6;
+  --primary-700: #2563eb;
+  --primary-300: #93c5fd;
+  --primary-50: #0f1a2e;
+  --primary-100: #16233b;
+  --primary-gradient: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%);
+
+  --accent-500: #fbbf24;
+  --accent-700: #f59e0b;
+  --accent-soft: rgba(251, 191, 36, 0.12);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.6);
+
+  --glass-bg: rgba(10, 18, 32, 0.75);
+  --glass-bg-scrolled: rgba(10, 18, 32, 0.92);
+
+  /* Liquid glass layer (dark — deep glass) */
+  --glass-tint: rgba(20, 30, 50, 0.55);
+  --glass-tint-soft: rgba(20, 30, 50, 0.35);
+  --glass-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  --glass-line: rgba(255, 255, 255, 0.14);
+  --glass-line-bright: rgba(255, 255, 255, 0.22);
+  --glass-hi-line: rgba(255, 255, 255, 0.35);
+  --glass-blur: blur(16px) saturate(180%);
+  --glass-blur-hover: blur(18px) saturate(180%);
+  --glass-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), inset 0 -1px 0 rgba(0, 0, 0, 0.20), 0 20px 40px rgba(0, 0, 0, 0.35), 0 8px 16px rgba(0, 0, 0, 0.20);
+  --glass-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.20), 0 28px 56px rgba(0, 0, 0, 0.45), 0 12px 24px rgba(0, 0, 0, 0.28);
+  --glass-pill-bg: rgba(255, 255, 255, 0.08);
+  --glass-pill-bg-scrolled: rgba(20, 30, 50, 0.62);
+  --glass-pill-line: rgba(255, 255, 255, 0.14);
+  --glass-pill-blur: blur(30px) saturate(180%);
+  --glass-pill-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 20px 50px rgba(0, 0, 0, 0.35), 0 8px 16px rgba(0, 0, 0, 0.20);
+  --glass-pill-shadow-scrolled: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 24px 60px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.3);
+  --glass-btn-sheen: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  --glass-btn-blur: blur(12px) saturate(180%);
+  --glass-card-blur: blur(16px) saturate(180%);
+  --glass-input-blur: blur(18px);
+  --glass-chip-blur: blur(12px);
+  --glass-blob-opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --section-pad: clamp(56px, 8vw, 96px);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-pad: clamp(48px, 10vw, 72px);
+    --nav-height: 64px;
+  }
+}

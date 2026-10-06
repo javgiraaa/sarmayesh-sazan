@@ -1,0 +1,24 @@
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+@keyframes hero-breathe {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes hero-rule-grow {
+  from { width: 0; }
+  to { width: 70%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow, .pulse-dot { animation: none; }
+}

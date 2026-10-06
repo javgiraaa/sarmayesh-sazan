@@ -1,0 +1,64 @@
+/* Colorful soft blobs behind everything — gives glass something to refract */
+.glass-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.glass-blobs span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: var(--glass-blob-opacity, 0.3);
+}
+.glass-blobs__blue {
+  width: 44vw;
+  height: 44vw;
+  min-width: 320px;
+  min-height: 320px;
+  top: -10vw;
+  right: -8vw;
+  background: #2563eb;
+}
+.glass-blobs__purple {
+  width: 38vw;
+  height: 38vw;
+  min-width: 280px;
+  min-height: 280px;
+  top: 30vh;
+  left: -10vw;
+  background: #7c3aed;
+}
+.glass-blobs__cyan {
+  width: 34vw;
+  height: 34vw;
+  min-width: 260px;
+  min-height: 260px;
+  bottom: -8vw;
+  right: 20vw;
+  background: #06b6d4;
+}
+
+[data-theme="dark"] .glass-blobs span { opacity: 0.5; }
+[data-theme="light"] .glass-blobs span { opacity: 0.3; }
+
+/* Mobile: smaller + fainter for 60fps */
+@media (max-width: 767px) {
+  .glass-blobs span { filter: blur(60px); }
+  .glass-blobs__blue { width: 70vw; height: 70vw; }
+  .glass-blobs__purple { width: 64vw; height: 64vw; }
+  .glass-blobs__cyan { width: 60vw; height: 60vw; }
+  [data-theme="dark"] .glass-blobs span { opacity: 0.35; }
+  [data-theme="light"] .glass-blobs span { opacity: 0.2; }
+}
+
+/* No movement when reduced motion requested */
+@media (prefers-reduced-motion: reduce) {
+  .glass-blobs span { animation: none; transform: none; }
+}
+
+/* Fallback: hide blobs when backdrop-filter unsupported (solid bg instead) */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-blobs { display: none; }
+}
