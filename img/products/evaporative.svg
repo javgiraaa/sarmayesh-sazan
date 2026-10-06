@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#2c5282"/><stop offset="1" stop-color="#3b82f6"/>
-  </linearGradient></defs>
-  <rect width="400" height="300" rx="20" fill="url(#g)" opacity="0.12"/>
-  <rect width="400" height="300" rx="20" fill="none" stroke="#2c5282" stroke-opacity="0.15" stroke-width="2"/>
-  <g transform="translate(140,70) scale(5)" fill="none" stroke="#2c5282" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18 h24 v14 h-24z M12 36 h16"/></g>
-  <text x="200" y="240" text-anchor="middle" font-family="Tahoma,sans-serif" font-size="26" font-weight="700" fill="#2c5282">سرمایش سازان | کولر آبی</text>
-</svg>
